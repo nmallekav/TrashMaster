@@ -1,2 +1,4 @@
 # cmsc436TrashMaster
-Trash Master Group 51 Semester Project for CMSC436 Fall 2020
+Semester Project for CMSC436 Fall 2020
+
+Name: Shannon Groves,  Group number: 51, Project name: Trash Master
