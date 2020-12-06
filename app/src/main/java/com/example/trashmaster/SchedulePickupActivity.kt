@@ -100,19 +100,32 @@ class SchedulePickupActivity : AppCompatActivity() {
                 (trashRadioButton!!.isChecked||recycleRadioButton!!.isChecked)
                 ){
 
-                myref.child("Location").setValue(date!!.text.toString()+"-"+
-                            time!!.text.toString()+"-"+
-                            location!!.text.toString()+"-"+
-                            country!!.text.toString()+"-"+
-                            state!!.text.toString()+"-"+
-                            city!!.text.toString()+"-"+
-                            postalcode!!.text.toString()+"-"+
+                myref.child("Location").setValue("scheduled pick up in "+date!!.text.toString()+" "+
+                        time!!.text.toString()+" at "+
+                        location!!.text.toString()+", "+
+                        country!!.text.toString()+", "+
+                        state!!.text.toString()+", "+
+                        city!!.text.toString()+", "+
+                        postalcode!!.text.toString()+", the trash type is "+
                         if(recycleRadioButton!!.isChecked){
                             "trashtype recycle"
                         }else{
                             "trashtype trash"
                         })
-
+                Toast.makeText(this, "scheduled pick up in "+date!!.text.toString()+" "+
+                        time!!.text.toString()+" at "+
+                        location!!.text.toString()+", "+
+                        country!!.text.toString()+", "+
+                        state!!.text.toString()+", "+
+                        city!!.text.toString()+", "+
+                        postalcode!!.text.toString()+", the trash type is "+
+                        if(recycleRadioButton!!.isChecked){
+                            "trashtype recycle"
+                        }else{
+                            "trashtype trash"
+                        }, Toast.LENGTH_LONG)
+                    .show()
+                finish()
             }  else{
                 Toast.makeText(this, "Not completed the information", Toast.LENGTH_LONG)
                     .show()
