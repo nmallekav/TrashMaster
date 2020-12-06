@@ -1,3 +1,5 @@
+package newpac
+
 import android.Manifest.permission.ACCESS_FINE_LOCATION
 import android.content.Context
 import android.content.pm.PackageManager
@@ -9,7 +11,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.*
-import com.example.trashmaster.R
 import com.google.firebase.database.FirebaseDatabase
 import java.util.*
 

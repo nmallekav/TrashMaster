@@ -1,3 +1,5 @@
+package newpac
+
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -5,7 +7,6 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.trashmaster.R
 import com.google.firebase.auth.FirebaseAuth
 
 
@@ -46,7 +47,7 @@ class RegistrationActivity : AppCompatActivity() {
                 } else {
                     Toast.makeText(applicationContext, "Registration failed! Please try again later", Toast.LENGTH_LONG).show()
                     val e = task.exception
-                    Log.e("LoginActivity", "Failed Registration", e);
+                    Log.e("newpac.LoginActivity", "Failed Registration", e);
                 }
             }
     }

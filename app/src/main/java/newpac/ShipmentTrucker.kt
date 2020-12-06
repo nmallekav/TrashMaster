@@ -1,7 +1,9 @@
+package newpac
+
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.example.trashmaster.R
+
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
@@ -13,19 +15,18 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 
-class GarbageTruckGPSMarkOnMap : AppCompatActivity(), OnMapReadyCallback {
+class ShipmentTrucker : AppCompatActivity(), OnMapReadyCallback {
 
     private lateinit var mMap: GoogleMap
-    private var myRef = FirebaseDatabase.getInstance().getReference().child("GarbageTruckLatLng")
+    private var myRef = FirebaseDatabase.getInstance().getReference().child("ShipmentTruckLatLng")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_garbage_truck_g_p_s_mark_on_map)
+        setContentView(R.layout.activity_shipment_trucker)
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         val mapFragment = supportFragmentManager
             .findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
-
     }
 
     /**
@@ -42,8 +43,6 @@ class GarbageTruckGPSMarkOnMap : AppCompatActivity(), OnMapReadyCallback {
 
         // Add a marker in Sydney and move the camera
 
-
-
     }
     override fun onStart() {
         super.onStart()
@@ -59,7 +58,7 @@ class GarbageTruckGPSMarkOnMap : AppCompatActivity(), OnMapReadyCallback {
                     mMap.moveCamera(CameraUpdateFactory.newLatLng(latandlng))
                     mMap.animateCamera(CameraUpdateFactory.zoomTo(20.toFloat()), 2000, null)
                 }else{
-                    Toast.makeText(this@GarbageTruckGPSMarkOnMap, "There is not garbage truck work now", Toast.LENGTH_LONG)
+                    Toast.makeText(this@ShipmentTrucker, "Not ship yet", Toast.LENGTH_LONG)
                         .show()
                     finish()
                 }
@@ -70,5 +69,4 @@ class GarbageTruckGPSMarkOnMap : AppCompatActivity(), OnMapReadyCallback {
             }
         })
     }
-
 }

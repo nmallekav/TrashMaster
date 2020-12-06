@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.trashmaster">
+    package="newpac">
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -62,18 +62,14 @@
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
-        <activity
-            android:name="GarbageTruckGPSMarkOnMap"
-            android:label="@string/title_activity_garbage_truck_g_p_s_mark_on_map" />
-        <activity android:name="testActivity">
 
 
         <activity
             android:name="MissedTrashActivity"
             android:label="@string/title_activity_missed_trash"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"/>
 
-        <activity android:name="com.example.trashmaster.HomeActivity">
+        <activity android:name="HomeActivity">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -101,9 +97,9 @@
                 android:resource="@xml/file_paths" />
         </provider>
 
-        <activity android:name="com.example.trashmaster.LoginActivity" />
-        <activity android:name="com.example.trashmaster.RegistrationActivity" />
-        <activity android:name="com.example.trashmaster.DashboardActivity" />
+        <activity android:name="LoginActivity" />
+        <activity android:name="RegistrationActivity" />
+        <activity android:name="DashboardActivity" />
 
 
     </application>

@@ -1,3 +1,5 @@
+package newpac
+
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
@@ -12,7 +14,6 @@ import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.FileProvider
-import com.example.trashmaster.R
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import java.io.File

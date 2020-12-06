@@ -1,6 +1,8 @@
+package newpac
+
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.trashmaster.R
+import newpac.R
 import com.google.android.gms.maps.GoogleMap
 import com.google.firebase.database.FirebaseDatabase
 

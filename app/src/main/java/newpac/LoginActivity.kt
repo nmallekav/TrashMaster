@@ -1,10 +1,11 @@
+package newpac
+
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.trashmaster.R
 import com.google.firebase.auth.FirebaseAuth
 
 class LoginActivity : AppCompatActivity() {
@@ -28,7 +29,7 @@ class LoginActivity : AppCompatActivity() {
 
     // TODO: Allow the user to log into their account
     // If the email and password are not empty, try to log in
-    // If the login is successful, store info into intent and launch DashboardActivity
+    // If the login is successful, store info into intent and launch newpac.DashboardActivity
     private fun loginUserAccount() {
         val email: String = userEmail!!.text.toString()
         val password: String = userPassword!!.text.toString()
