@@ -57,6 +57,7 @@
         <activity android:name="ReportStolenActivity" />
         <activity android:name="workerHoldActivity" />
         <activity android:name="GarbageTruckGpsUpload" />
+        <activity android:name=".GarbageTruckGPSMarkOnMap" />
 
         <meta-data
             android:name="com.google.android.gms.version"
