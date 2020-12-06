@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "88151291225",
+    "firebase_url": "https://trashmaster-1a807.firebaseio.com",
+    "project_id": "trashmaster-1a807",
+    "storage_bucket": "trashmaster-1a807.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:88151291225:android:754f437d3f18fe27c94848",
+        "android_client_info": {
+          "package_name": "com.example.trashmaster"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "88151291225-6rsrf621i9s7g814j8bbf65fgmu9agrj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.trashmaster",
+            "certificate_hash": "22585295478580ffefab770bf23d7a29a35a3618"
+          }
+        },
+        {
+          "client_id": "88151291225-gof478fb0o2hejpka3lufbcda4hlkk01.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.trashmaster",
+            "certificate_hash": "8496fcead785a5055d5e3b1a04634a0ef4db2f3b"
+          }
+        },
+        {
+          "client_id": "88151291225-c2n65rjeh1paqh16t027gsils3qr74cs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6LHs_K-S17dpIzgLqDTqgYDNOoMDtQXg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "88151291225-c2n65rjeh1paqh16t027gsils3qr74cs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
