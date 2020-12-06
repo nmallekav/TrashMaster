@@ -37,7 +37,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".feakeGpsDataUploadForShowOffActivity"></activity>
+        <activity android:name="FakeGpsDataUploadForShowOffActivity"></activity>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -51,29 +51,29 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".ShipmentTrucker"
+            android:name="ShipmentTrucker"
             android:label="@string/title_activity_shipment_trucker" />
-        <activity android:name=".reportStolenListActivity" />
-        <activity android:name=".ReportStolenActivity" />
-        <activity android:name=".workerHoldActivity" />
-        <activity android:name=".GarbageTruckGpsUpload" />
+        <activity android:name="ReportStolenListActivity" />
+        <activity android:name="ReportStolenActivity" />
+        <activity android:name="workerHoldActivity" />
+        <activity android:name="GarbageTruckGpsUpload" />
 
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
         <activity
-            android:name=".GarbageTruckGPSMarkOnMap"
+            android:name="GarbageTruckGPSMarkOnMap"
             android:label="@string/title_activity_garbage_truck_g_p_s_mark_on_map" />
-        <activity android:name=".testActivity">
+        <activity android:name="testActivity">
 
 
         <activity
-            android:name=".ui.project.MissedTrashActivity"
+            android:name="MissedTrashActivity"
             android:label="@string/title_activity_missed_trash"
             android:theme="@style/AppTheme.NoActionBar">
 
-        <activity android:name="com.example.trashmaster.ui.login.HomeActivity">
+        <activity android:name="com.example.trashmaster.HomeActivity">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -82,11 +82,11 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".SchedulePickupActivity" />
+        <activity android:name="SchedulePickupActivity" />
 
           
         <activity
-            android:name=".ui.project.ReportTrashActivity"
+            android:name="ReportTrashActivity"
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
@@ -101,9 +101,9 @@
                 android:resource="@xml/file_paths" />
         </provider>
 
-        <activity android:name="com.example.trashmaster.ui.login.LoginActivity" />
-        <activity android:name="com.example.trashmaster.ui.login.RegistrationActivity" />
-        <activity android:name="com.example.trashmaster.ui.login.DashboardActivity" />
+        <activity android:name="com.example.trashmaster.LoginActivity" />
+        <activity android:name="com.example.trashmaster.RegistrationActivity" />
+        <activity android:name="com.example.trashmaster.DashboardActivity" />
 
 
     </application>

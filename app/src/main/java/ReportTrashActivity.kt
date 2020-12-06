@@ -1,5 +1,3 @@
-package com.example.trashmaster.ui.project
-
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
@@ -15,8 +13,6 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.FileProvider
 import com.example.trashmaster.R
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import java.io.File
@@ -53,7 +49,9 @@ class ReportTrashActivity : AppCompatActivity() {
             photoURI = FileProvider.getUriForFile(this, "com.example.android.fileprovider", photoFile)
 
             intent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI)
-            startActivityForResult(intent, REQUEST_CODE)
+            startActivityForResult(intent,
+                REQUEST_CODE
+            )
         }
     }
 

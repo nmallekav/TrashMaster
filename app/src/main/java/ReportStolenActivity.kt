@@ -1,13 +1,9 @@
-package com.example.trashmaster
-
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
-import com.google.android.gms.maps.CameraUpdateFactory
-import com.google.android.gms.maps.model.LatLng
-import com.google.android.gms.maps.model.MarkerOptions
+import com.example.trashmaster.R
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
@@ -27,7 +23,7 @@ class ReportStolenActivity : AppCompatActivity() {
         reportStolen=findViewById(R.id.ReportStolenButton)
         truckShipment=findViewById(R.id.truckShipment)
         reportStolen!!.setOnClickListener {
-            var intent1= Intent(this, reportStolenListActivity::class.java)
+            var intent1= Intent(this, ReportStolenListActivity::class.java)
             startActivity(intent1)
         }
         truckShipment!!.setOnClickListener {

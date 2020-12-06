@@ -1,10 +1,9 @@
-package com.example.trashmaster
-
 import android.location.Location
 import android.location.LocationListener
 import android.location.LocationManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.trashmaster.R
 import com.google.firebase.database.FirebaseDatabase
 
 class GarbageTruckGpsUpload : AppCompatActivity() {

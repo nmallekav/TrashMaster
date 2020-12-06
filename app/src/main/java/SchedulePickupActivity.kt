@@ -1,5 +1,3 @@
-package com.example.trashmaster
-
 import android.Manifest.permission.ACCESS_FINE_LOCATION
 import android.content.Context
 import android.content.pm.PackageManager
@@ -11,11 +9,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.*
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
+import com.example.trashmaster.R
 import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ValueEventListener
-import java.lang.Exception
 import java.util.*
 
 class SchedulePickupActivity : AppCompatActivity() {
@@ -66,7 +61,9 @@ class SchedulePickupActivity : AppCompatActivity() {
                 // Return a LocationListener
             }
             if (checkSelfPermission(ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-                requestPermissions(arrayOf(ACCESS_FINE_LOCATION),REQUEST_FINE_LOC_PERM_ONCREATE)
+                requestPermissions(arrayOf(ACCESS_FINE_LOCATION),
+                    REQUEST_FINE_LOC_PERM_ONCREATE
+                )
             }else {
                 if (null != mLocationManager!!.getProvider(LocationManager.NETWORK_PROVIDER)) {
                     currentLocation = mLocationManager!!.getLastKnownLocation(LocationManager.NETWORK_PROVIDER)

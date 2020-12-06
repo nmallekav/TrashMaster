@@ -1,13 +1,12 @@
-package com.example.trashmaster
-
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import com.example.trashmaster.R
 import com.google.firebase.database.FirebaseDatabase
 
-class reportStolenListActivity : AppCompatActivity() {
+class ReportStolenListActivity : AppCompatActivity() {
     private var submit:Button?=null
     private var stolenLocation:EditText?=null
     private var stolenDate:EditText?=null

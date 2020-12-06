@@ -1,19 +1,10 @@
-package com.example.trashmaster
-
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
-import com.google.android.gms.maps.CameraUpdateFactory
+import com.example.trashmaster.R
 import com.google.android.gms.maps.GoogleMap
-import com.google.android.gms.maps.model.LatLng
-import com.google.android.gms.maps.model.MarkerOptions
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ValueEventListener
-import java.lang.Thread.sleep
 
-class feakeGpsDataUploadForShowOffActivity : AppCompatActivity() {
+class FakeGpsDataUploadForShowOffActivity : AppCompatActivity() {
     private lateinit var mMap: GoogleMap
     private var myRef = FirebaseDatabase.getInstance().getReference().child("ShipmentTruckLatLng")
     var lat = 38.945471

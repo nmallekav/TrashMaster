@@ -1,5 +1,3 @@
-package com.example.trashmaster.ui.login
-
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button

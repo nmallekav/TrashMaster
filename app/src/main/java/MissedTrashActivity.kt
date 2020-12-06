@@ -1,5 +1,3 @@
-package com.example.trashmaster.ui.project
-
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
