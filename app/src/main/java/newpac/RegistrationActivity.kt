@@ -43,7 +43,9 @@ class RegistrationActivity : AppCompatActivity() {
                     Toast.makeText(applicationContext, "Registration successful!", Toast.LENGTH_LONG).show()
 
                     val intent = Intent(this@RegistrationActivity, LoginActivity::class.java)
-                   startActivity(intent)
+                    intent.putExtra("username", email)
+                    startActivity(intent)
+
                 } else {
                     Toast.makeText(applicationContext, "Registration failed! Please try again later", Toast.LENGTH_LONG).show()
                     val e = task.exception

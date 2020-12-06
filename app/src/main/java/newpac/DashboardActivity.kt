@@ -2,6 +2,7 @@ package newpac
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
@@ -33,8 +34,7 @@ class DashboardActivity : AppCompatActivity() {
 
         mGpsTracker = findViewById(R.id.gps_tracker)
         mGpsTracker!!.setOnClickListener {gpsTrackerMethod()}
-
-
+        
     }
 
     private fun schedulePickupMethod() {
