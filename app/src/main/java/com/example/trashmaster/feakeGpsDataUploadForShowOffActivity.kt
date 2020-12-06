@@ -26,10 +26,10 @@ class feakeGpsDataUploadForShowOffActivity : AppCompatActivity() {
         super.onResume()
 
 
-
-           lat=lat+0.00001
-           lng=lng+0.00001
-           myRef.setValue(lat.toString()+","+lng.toString())
-
+        while(true) {
+            lat = lat + 0.00001
+            lng = lng + 0.00001
+            myRef.setValue(lat.toString() + "," + lng.toString())
+        }
     }
 }

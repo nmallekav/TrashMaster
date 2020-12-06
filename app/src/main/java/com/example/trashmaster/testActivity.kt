@@ -9,7 +9,7 @@ class testActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_test)
-        var intent = Intent(this,feakeGpsDataUploadForShowOffActivity::class.java)
+        var intent = Intent(this,GarbageTruckGPSMarkOnMap::class.java)
         startActivity(intent)
     }
 }
