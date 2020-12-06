@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <Button
+        android:id="@+id/gps_tracker"
+        android:layout_width="306dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="38dp"
+        android:text="gps tracker"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/report_trash"
+        app:layout_constraintVertical_bias="0.119" />
+
+    <Button
+        android:id="@+id/report_stolen"
+        android:layout_width="298dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="48dp"
+        android:text="report_stolen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/schedule_pickup" />
+
+    <Button
+        android:id="@+id/schedule_pickup"
+        android:layout_width="300dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="56dp"
+        android:text="Schedule Pickup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dashboard" />
+
+    <Button
+        android:id="@+id/missed_trash"
+        android:layout_width="302dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="44dp"
+        android:text="Missed Trash"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/report_stolen" />
+
+    <Button
+        android:id="@+id/report_trash"
+        android:layout_width="302dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="48dp"
+        android:text="report trash"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/missed_trash" />
+
+    <TextView
+        android:id="@+id/dashboard"
+        android:layout_width="285dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="32dp"
+        android:text="dashboard!"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
