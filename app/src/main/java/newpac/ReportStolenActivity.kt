@@ -35,7 +35,7 @@ class ReportStolenActivity : AppCompatActivity() {
         truckShipment!!.setOnClickListener {
             myRef.addValueEventListener(object : ValueEventListener {
                 override fun onDataChange(dataSnapshot: DataSnapshot) {
-                    var stolenReport=dataSnapshot.getValue(String::class.java)
+                     stolenReport=dataSnapshot.getValue(String::class.java)
                 }
 
                 override fun onCancelled(databaseError: DatabaseError) {
@@ -44,7 +44,7 @@ class ReportStolenActivity : AppCompatActivity() {
             })
             myRef1.addValueEventListener(object : ValueEventListener {
                 override fun onDataChange(dataSnapshot: DataSnapshot) {
-                    var shiped=dataSnapshot.getValue(String::class.java)
+                    shiped=dataSnapshot.getValue(String::class.java)
                 }
 
                 override fun onCancelled(databaseError: DatabaseError) {
