@@ -36,8 +36,8 @@ class DashboardActivity : AppCompatActivity() {
         mGpsTracker = findViewById(R.id.gps_tracker)
         mGpsTracker!!.setOnClickListener {gpsTrackerMethod()}
 
-        mAddTrashcan = findViewById(R.id.trashcan_number)
-        mAddTrashcan!!.setOnClickListener{addTrashcanNumber()}
+       mAddTrashcan = findViewById(R.id.add_trashcan_number)
+       mAddTrashcan!!.setOnClickListener{addTrashcanNumber()}
     }
 
 

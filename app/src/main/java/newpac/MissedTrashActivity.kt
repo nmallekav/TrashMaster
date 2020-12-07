@@ -7,14 +7,17 @@ import android.widget.DatePicker
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.gms.maps.CameraUpdateFactory
+import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.MarkerOptions
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.*
 import newpac.R
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
 
 
 class MissedTrashActivity : AppCompatActivity() {
     private lateinit var database: DatabaseReference
+    private lateinit var trashcanNumber : String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,14 +35,27 @@ class MissedTrashActivity : AppCompatActivity() {
 
             database = FirebaseDatabase.getInstance().getReference()
 
-            val user = FirebaseAuth.getInstance().currentUser.toString()
-            val trashcanNumber = database.child(user).toString()
+            val user = FirebaseAuth.getInstance().currentUser
+            // val trashcanNumber = database.child(user!!.uid).child("trashcanNumber").toString()
+
+            val  myRef = FirebaseDatabase.getInstance().getReference().child(user!!.uid).child("trashcanNumber")
+
+            myRef.addValueEventListener(object : ValueEventListener {
+                override fun onDataChange(dataSnapshot: DataSnapshot) {
+                    trashcanNumber = dataSnapshot.getValue(String::class.java).toString()
+                }
+
+                override fun onCancelled(databaseError: DatabaseError) {
+
+                }
+            })
 
             database.child(trashcanNumber).child("Missed Trash").child("Date")
                 .setValue("${day}, ${month}, ${year}")
             Log.i(TAG, "${day}, ${month}, ${year}")
             database.child(trashcanNumber).child("Missed Trash").child("Complaints")
                 .setValue(complaints.text.toString())
+
             Toast.makeText(this, "Submitted!", Toast.LENGTH_LONG).show()
             complaints.setText("")
         }

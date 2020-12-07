@@ -25,6 +25,7 @@
         android:id="@+id/trashcan_number"
         android:layout_width="309dp"
         android:layout_height="67dp"
+        android:textColor="@color/white"
         android:ems="10"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"

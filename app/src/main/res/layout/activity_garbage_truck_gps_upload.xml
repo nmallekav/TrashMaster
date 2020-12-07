@@ -16,7 +16,6 @@
         android:text="Your location is uploading...."
         android:textAllCaps="false"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:textColor="#FFFFFF"
         android:textSize="24sp"
         android:textStyle="bold"
         android:typeface="monospace"
