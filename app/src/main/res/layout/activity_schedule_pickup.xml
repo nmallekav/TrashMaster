@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
-    android:backgroundTint="#000000"
-    tools:context=".SchedulePickupActivity">
+
+    tools:context=".SchedulePickupActivity"
+    android:background="@color/black">
+
 
     <TextView
         android:id="@+id/PostalCodeTextView"
@@ -20,7 +21,12 @@
         app:layout_constraintHorizontal_bias="0.238"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.544" />
+        app:layout_constraintVertical_bias="0.544"
+        android:textColor="@color/white"
+        android:shadowColor="@android:color/holo_blue_dark"
+        android:shadowDx="7"
+        android:shadowDy="7"
+        android:shadowRadius="1"/>
 
     <TextView
         android:id="@+id/CityTextView"
@@ -34,7 +40,12 @@
         app:layout_constraintHorizontal_bias="0.208"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.482" />
+        app:layout_constraintVertical_bias="0.482"
+        android:textColor="@color/white"
+        android:shadowColor="@android:color/holo_blue_dark"
+        android:shadowDx="7"
+        android:shadowDy="7"
+        android:shadowRadius="1"/>
 
     <EditText
         android:id="@+id/editTextState"
@@ -49,7 +60,8 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/StateTextView"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.416" />
+        app:layout_constraintVertical_bias="0.416"
+        android:backgroundTint="@android:color/holo_blue_dark"/>
 
     <EditText
         android:id="@+id/editTextCity"
@@ -64,7 +76,8 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/CityTextView"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.482" />
+        app:layout_constraintVertical_bias="0.482"
+        android:backgroundTint="@android:color/holo_blue_dark"/>
 
     <TextView
         android:id="@+id/LocationTextView"
@@ -78,7 +91,12 @@
         app:layout_constraintHorizontal_bias="0.215"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.252" />
+        app:layout_constraintVertical_bias="0.252"
+        android:textColor="@color/white"
+        android:shadowColor="@android:color/holo_blue_dark"
+        android:shadowDx="7"
+        android:shadowDy="7"
+        android:shadowRadius="1"/>
 
     <TextView
         android:id="@+id/StateTextView"
@@ -92,7 +110,12 @@
         app:layout_constraintHorizontal_bias="0.208"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.416" />
+        app:layout_constraintVertical_bias="0.416"
+        android:textColor="@color/white"
+        android:shadowColor="@android:color/holo_blue_dark"
+        android:shadowDx="7"
+        android:shadowDy="7"
+        android:shadowRadius="1"/>
 
     <EditText
         android:id="@+id/editTextCountry"
@@ -107,7 +130,8 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/CountryTextView"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.342" />
+        app:layout_constraintVertical_bias="0.342"
+        android:backgroundTint="@android:color/holo_blue_dark"/>
 
     <TextView
         android:id="@+id/TimeTextView"
@@ -121,7 +145,12 @@
         app:layout_constraintHorizontal_bias="0.19"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.164" />
+        app:layout_constraintVertical_bias="0.164"
+        android:textColor="@color/white"
+        android:shadowColor="@android:color/holo_blue_dark"
+        android:shadowDx="7"
+        android:shadowDy="7"
+        android:shadowRadius="1"/>
 
     <TextView
         android:id="@+id/CountryTextView"
@@ -135,7 +164,12 @@
         app:layout_constraintHorizontal_bias="0.208"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.342" />
+        app:layout_constraintVertical_bias="0.342"
+        android:textColor="@color/white"
+        android:shadowColor="@android:color/holo_blue_dark"
+        android:shadowDx="7"
+        android:shadowDy="7"
+        android:shadowRadius="1"/>
 
     <Button
         android:id="@+id/submitButton"
@@ -148,7 +182,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.95" />
+        app:layout_constraintVertical_bias="0.95"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:textColor ="@color/white"/>
 
     <TextView
         android:id="@+id/DateTextView"
@@ -162,7 +198,12 @@
         app:layout_constraintHorizontal_bias="0.19"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.07999998" />
+        app:layout_constraintVertical_bias="0.07999998"
+        android:textColor="@color/white"
+        android:shadowColor="@android:color/holo_blue_dark"
+        android:shadowDx="7"
+        android:shadowDy="7"
+        android:shadowRadius="1"/>
 
     <RadioGroup
         android:id="@+id/TypeRadioGroup"
@@ -172,24 +213,36 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.84000003">
+        app:layout_constraintVertical_bias="0.84000003"
+        >
 
         <RadioButton
             android:id="@+id/RecycleRadioButton"
             android:layout_width="match_parent"
             android:layout_height="58dp"
-            android:buttonTint="#00E5FF"
-            android:checked="false"
+
             android:text="Recycle"
-            android:textColor="#FFFFFF" />
+            android:textColor="@color/white"
+            android:shadowColor="@android:color/holo_blue_dark"
+            android:shadowDx="7"
+            android:shadowDy="7"
+            android:shadowRadius="1"
+            android:buttonTint="@android:color/holo_blue_dark"/>
+
 
         <RadioButton
             android:id="@+id/TrashRadioButton"
             android:layout_width="match_parent"
             android:layout_height="58dp"
-            android:buttonTint="#00E5FF"
+
             android:text="Trash"
-            android:textColor="#FFFFFF" />
+            android:textColor="@color/white"
+            android:shadowColor="@android:color/holo_blue_dark"
+            android:shadowDx="7"
+            android:shadowDy="7"
+            android:shadowRadius="1"
+            android:buttonTint="@android:color/holo_blue_dark"/>
+
     </RadioGroup>
 
     <EditText
@@ -206,7 +259,12 @@
         app:layout_constraintStart_toEndOf="@+id/TimeTextView"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.164"
-        tools:text="hh/mm" />
+
+        tools:hint="hh/mm"
+       
+
+        android:backgroundTint="@android:color/holo_blue_dark"/>
+
 
     <EditText
         android:id="@+id/editTextDate"
@@ -222,7 +280,11 @@
         app:layout_constraintStart_toEndOf="@+id/DateTextView"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.07999998"
-        tools:text="yyyy/mm/dd" />
+
+        tools:hint="yyyy/mm/dd" 
+
+        android:backgroundTint="@android:color/holo_blue_dark"/>
+
 
     <EditText
         android:id="@+id/editTextLocation"
@@ -238,7 +300,8 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/LocationTextView"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.252" />
+        app:layout_constraintVertical_bias="0.252"
+        android:backgroundTint="@android:color/holo_blue_dark"/>
 
     <EditText
         android:id="@+id/editTextPostalCode"
@@ -254,7 +317,8 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/PostalCodeTextView"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.544" />
+        app:layout_constraintVertical_bias="0.544"
+        android:backgroundTint="@android:color/holo_blue_dark"/>
 
     <Button
         android:id="@+id/useCurrentLocation"
@@ -267,6 +331,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.65" />
+        app:layout_constraintVertical_bias="0.65"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:textColor ="@color/white"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,7 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/black">
 
 
     <TextView
@@ -12,42 +13,83 @@
         android:layout_width="200dp"
         android:layout_height="0dp"
         android:layout_marginTop="140dp"
-        android:text="Login"
+        android:text="Trash Master"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="35dp"
+        android:gravity = "center"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:textColor="@color/white"
+        android:shadowColor="@android:color/holo_blue_dark"
+        android:shadowDx="7"
+        android:shadowDy="7"
+        android:shadowRadius="1"/>
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="63dp"
+        android:layout_height="175dp"
+        android:layout_marginStart="50dp"
+        android:src="@drawable/trashcan2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/login_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/login_view"
+        tools:layout_editor_absoluteY="96dp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="63dp"
+        android:layout_height="175dp"
+        android:layout_marginEnd="50dp"
+        android:src="@drawable/trashcan2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/login_view"
+        app:layout_constraintBottom_toBottomOf="@id/login_view"
+        tools:layout_editor_absoluteY="96dp"/>
 
     <EditText
         android:id="@+id/email"
         android:layout_width="309dp"
         android:layout_height="46dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="50dp"
         android:hint="Email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login_view" />
+        app:layout_constraintTop_toBottomOf="@+id/login_view"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:backgroundTint="@android:color/holo_blue_dark"/>
 
     <EditText
         android:id="@+id/password"
-        android:layout_width="323dp"
+        android:layout_width="309dp"
         android:layout_height="43dp"
         android:layout_marginTop="88dp"
         android:hint="Password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email" />
+        app:layout_constraintTop_toBottomOf="@+id/email"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:backgroundTint="@android:color/holo_blue_dark"/>
 
     <Button
         android:id="@+id/login_button"
-        android:layout_width="210dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="92dp"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="40dp"
         android:text="Login"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password"
-        app:layout_constraintVertical_bias="0.086" />
+        app:layout_constraintVertical_bias="0.086"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:textColor ="@color/white"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

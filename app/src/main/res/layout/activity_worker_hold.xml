@@ -4,19 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000"
-    tools:context=".workerHoldActivity">
+
+    tools:context=".workerHoldActivity"
+    android:background="@color/black">
+
 
     <Button
         android:id="@+id/upload"
         android:layout_width="192dp"
         android:layout_height="71dp"
-        android:background="#00E5FF"
-        android:text="uploadlocation"
-        android:textColor="#FFFFFF"
+
+        android:text="upload Location"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.389" />
+        app:layout_constraintVertical_bias="0.389"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:textColor ="@color/white"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

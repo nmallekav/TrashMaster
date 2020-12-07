@@ -4,72 +4,106 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/black">
 
+    <TextView
+        android:id="@+id/dashboard"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="40dp"
+        android:text="Dashboard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="35dp"
+        android:gravity = "center"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:textColor="@color/white"
+        android:shadowColor="@android:color/holo_blue_dark"
+        android:shadowDx="7"
+        android:shadowDy="7"
+        android:shadowRadius="1"/>
 
     <Button
-        android:id="@+id/gps_tracker"
-        android:layout_width="306dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="38dp"
-        android:text="gps tracker"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/add_trashcan_number"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="40dp"
+        android:text="add trashcan number to your account"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/report_trash"
-        app:layout_constraintVertical_bias="0.119" />
-
-    <Button
-        android:id="@+id/report_stolen"
-        android:layout_width="298dp"
-        android:layout_height="67dp"
-        android:layout_marginTop="48dp"
-        android:text="report_stolen"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/schedule_pickup" />
+        app:layout_constraintTop_toBottomOf="@+id/dashboard"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:textColor ="@color/white"/>
 
     <Button
         android:id="@+id/schedule_pickup"
         android:layout_width="300dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="56dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="28dp"
         android:text="Schedule Pickup"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dashboard" />
+        app:layout_constraintTop_toBottomOf="@+id/add_trashcan_number"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:textColor ="@color/white"/>
+
+    <Button
+        android:id="@+id/report_stolen"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="28dp"
+        android:text="report stolen trashcan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/schedule_pickup"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:textColor ="@color/white"/>
 
     <Button
         android:id="@+id/missed_trash"
-        android:layout_width="302dp"
-        android:layout_height="63dp"
-        android:layout_marginTop="44dp"
-        android:text="Missed Trash"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="28dp"
+        android:text="report Missed Trash pickup"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/report_stolen" />
+        app:layout_constraintTop_toBottomOf="@+id/report_stolen"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:textColor ="@color/white"/>
 
     <Button
         android:id="@+id/report_trash"
-        android:layout_width="302dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="48dp"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="32dp"
         android:text="report trash"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/missed_trash" />
+        app:layout_constraintTop_toBottomOf="@+id/missed_trash"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:textColor ="@color/white"/>
 
-    <TextView
-        android:id="@+id/dashboard"
-        android:layout_width="285dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="32dp"
-        android:text="dashboard!"
+    <Button
+        android:id="@+id/gps_tracker"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="40dp"
+        android:text="gps tracker"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/report_trash"
+        app:layout_constraintVertical_bias="0.0"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:textColor ="@color/white"/>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
