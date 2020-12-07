@@ -49,8 +49,8 @@
         android:id="@+id/editTextState"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
+        android:backgroundTint="@android:color/holo_blue_dark"
         android:ems="10"
-        android:inputType="time"
         android:textColor="#FFFFFF"
         app:backgroundTint="#00E5FF"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -58,15 +58,14 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/StateTextView"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.416"
-        android:backgroundTint="@android:color/holo_blue_dark"/>
+        app:layout_constraintVertical_bias="0.416" />
 
     <EditText
         android:id="@+id/editTextCity"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
+        android:backgroundTint="@android:color/holo_blue_dark"
         android:ems="10"
-        android:inputType="time"
         android:textColor="#FFFFFF"
         app:backgroundTint="#00E5FF"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -74,8 +73,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/CityTextView"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.482"
-        android:backgroundTint="@android:color/holo_blue_dark"/>
+        app:layout_constraintVertical_bias="0.482" />
 
     <TextView
         android:id="@+id/LocationTextView"
@@ -117,8 +115,8 @@
         android:id="@+id/editTextCountry"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
+        android:backgroundTint="@android:color/holo_blue_dark"
         android:ems="10"
-        android:inputType="time"
         android:textColor="#FFFFFF"
         app:backgroundTint="#00E5FF"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -126,8 +124,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/CountryTextView"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.342"
-        android:backgroundTint="@android:color/holo_blue_dark"/>
+        app:layout_constraintVertical_bias="0.342" />
 
     <TextView
         android:id="@+id/TimeTextView"
@@ -204,21 +201,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.84000003"
-        >
+        app:layout_constraintVertical_bias="0.84000003">
 
         <RadioButton
             android:id="@+id/RecycleRadioButton"
             android:layout_width="match_parent"
             android:layout_height="58dp"
 
-            android:text="Recycle"
-            android:textColor="@color/white"
+            android:buttonTint="@android:color/holo_blue_dark"
             android:shadowColor="@android:color/holo_blue_dark"
             android:shadowDx="7"
             android:shadowDy="7"
             android:shadowRadius="1"
-            android:buttonTint="@android:color/holo_blue_dark"/>
+            android:text="Recycle"
+            android:textColor="@color/white" />
 
 
         <RadioButton
@@ -226,13 +222,13 @@
             android:layout_width="match_parent"
             android:layout_height="58dp"
 
-            android:text="Trash"
-            android:textColor="@color/white"
+            android:buttonTint="@android:color/holo_blue_dark"
             android:shadowColor="@android:color/holo_blue_dark"
             android:shadowDx="7"
             android:shadowDy="7"
             android:shadowRadius="1"
-            android:buttonTint="@android:color/holo_blue_dark"/>
+            android:text="Trash"
+            android:textColor="@color/white" />
 
     </RadioGroup>
 
@@ -243,6 +239,7 @@
         android:ems="10"
         android:inputType="time"
         android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
         app:backgroundTint="#00E5FF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -250,7 +247,6 @@
         app:layout_constraintStart_toEndOf="@+id/TimeTextView"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.164"
-
         tools:hint="hh/mm"
        
 
@@ -264,6 +260,7 @@
         android:inputType="date"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
+        android:textColorHint="#FFFFFF"
         app:backgroundTint="#00E5FF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
