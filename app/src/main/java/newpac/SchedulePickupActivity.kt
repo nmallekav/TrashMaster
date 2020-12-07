@@ -13,6 +13,7 @@ import android.util.Log
 import android.widget.*
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
+import kotlinx.coroutines.delay
 import java.util.*
 
 class SchedulePickupActivity : AppCompatActivity() {
@@ -58,27 +59,35 @@ class SchedulePickupActivity : AppCompatActivity() {
         var user = firebase.currentUser
         useCurrentButton!!.setOnClickListener{
             mLocationManager = getSystemService(Context.LOCATION_SERVICE) as LocationManager
-            locationListener=makeLocationListener()
+
             if (null != mLocationManager) {
                 Log.i(TAG, "Couldn't find the LocationManager")
                 // Return a LocationListener
             }
+            locationListener=makeLocationListener()
             if (checkSelfPermission(ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
                 requestPermissions(arrayOf(ACCESS_FINE_LOCATION),
                     REQUEST_FINE_LOC_PERM_ONCREATE
                 )
             }else {
-                if (null != mLocationManager!!.getProvider(LocationManager.NETWORK_PROVIDER)) {
+                if (null != mLocationManager!!.getProvider(LocationManager.GPS_PROVIDER)) {
+
+                    currentLocation = mLocationManager!!.getLastKnownLocation(LocationManager.GPS_PROVIDER)
+                    provider=LocationManager.GPS_PROVIDER
+
+                }
+                else if (null != mLocationManager!!.getProvider(LocationManager.NETWORK_PROVIDER)) {
                     currentLocation = mLocationManager!!.getLastKnownLocation(LocationManager.NETWORK_PROVIDER)
                     sHasNetwork = true
                     provider=LocationManager.NETWORK_PROVIDER
 
-                }else if (null != mLocationManager!!.getProvider(LocationManager.GPS_PROVIDER)) {
-                    currentLocation = mLocationManager!!.getLastKnownLocation(LocationManager.GPS_PROVIDER)
-                    provider=LocationManager.GPS_PROVIDER
+
                 }
-                mLocationManager!!.requestLocationUpdates(provider!!, mMinTime, mMinDistance, locationListener!!)
-                getaddress(currentLocation!!)
+                mLocationManager!!.requestLocationUpdates(provider!!, 0.toLong(), 0.toFloat(), locationListener!!)
+                if(null!=currentLocation){
+                getaddress(currentLocation!!)}else{
+
+                }
             }
 
         }
@@ -159,10 +168,10 @@ class SchedulePickupActivity : AppCompatActivity() {
             }
         }
     }
-    private fun getaddress(inputlocation:Location){
+    private fun getaddress(inputlocation:Location?){
 
-            var longitude=inputlocation.longitude
-            var latitude=inputlocation.latitude
+            var longitude=inputlocation!!.longitude
+            var latitude=inputlocation!!.latitude
             var geocoder = Geocoder(this, Locale.getDefault())
             var addresses= geocoder.getFromLocation(latitude,longitude,1)
 
