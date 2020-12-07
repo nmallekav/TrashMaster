@@ -4,13 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#000000"
     tools:context=".workerHoldActivity">
 
     <Button
         android:id="@+id/upload"
         android:layout_width="192dp"
         android:layout_height="71dp"
+        android:background="#00E5FF"
         android:text="uploadlocation"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.*
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 import java.util.*
 
@@ -53,7 +54,8 @@ class SchedulePickupActivity : AppCompatActivity() {
         trashRadioButton=findViewById(R.id.TrashRadioButton) as RadioButton
         recycleRadioButton = findViewById(R.id.RecycleRadioButton) as RadioButton
         typeRadioGroup!!.check(R.id.TrashRadioButton)
-
+        var firebase = FirebaseAuth.getInstance()
+        var user = firebase.currentUser
         useCurrentButton!!.setOnClickListener{
             mLocationManager = getSystemService(Context.LOCATION_SERVICE) as LocationManager
             locationListener=makeLocationListener()
@@ -98,7 +100,7 @@ class SchedulePickupActivity : AppCompatActivity() {
                 (trashRadioButton!!.isChecked||recycleRadioButton!!.isChecked)
                 ){
 
-                myref.child("Location").setValue("scheduled pick up in "+date!!.text.toString()+" "+
+                myref.child(user!!.uid).child("Location").setValue("scheduled pick up in "+date!!.text.toString()+" "+
                         time!!.text.toString()+" at "+
                         location!!.text.toString()+", "+
                         country!!.text.toString()+", "+

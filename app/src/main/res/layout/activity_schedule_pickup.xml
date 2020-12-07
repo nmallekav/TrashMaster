@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:backgroundTint="#000000"
     tools:context=".SchedulePickupActivity">
 
     <TextView
@@ -11,6 +13,7 @@
         android:layout_width="130dp"
         android:layout_height="30dp"
         android:text="PostalCode:"
+        android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,6 +27,7 @@
         android:layout_width="90dp"
         android:layout_height="30dp"
         android:text="City:"
+        android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -38,6 +42,8 @@
         android:layout_height="50dp"
         android:ems="10"
         android:inputType="time"
+        android:textColor="#FFFFFF"
+        app:backgroundTint="#00E5FF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -51,6 +57,8 @@
         android:layout_height="50dp"
         android:ems="10"
         android:inputType="time"
+        android:textColor="#FFFFFF"
+        app:backgroundTint="#00E5FF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -63,6 +71,7 @@
         android:layout_width="100dp"
         android:layout_height="30dp"
         android:text="Address:"
+        android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -76,6 +85,7 @@
         android:layout_width="90dp"
         android:layout_height="30dp"
         android:text="State:"
+        android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -90,6 +100,8 @@
         android:layout_height="50dp"
         android:ems="10"
         android:inputType="time"
+        android:textColor="#FFFFFF"
+        app:backgroundTint="#00E5FF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -102,6 +114,7 @@
         android:layout_width="60dp"
         android:layout_height="30dp"
         android:text="Time:"
+        android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -115,6 +128,7 @@
         android:layout_width="90dp"
         android:layout_height="30dp"
         android:text="Country:"
+        android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -127,7 +141,9 @@
         android:id="@+id/submitButton"
         android:layout_width="136dp"
         android:layout_height="55dp"
+        android:background="#00E5FF"
         android:text="Submit"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -139,6 +155,7 @@
         android:layout_width="60dp"
         android:layout_height="30dp"
         android:text="Date:"
+        android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -161,13 +178,18 @@
             android:id="@+id/RecycleRadioButton"
             android:layout_width="match_parent"
             android:layout_height="58dp"
-            android:text="Recycle" />
+            android:buttonTint="#00E5FF"
+            android:checked="false"
+            android:text="Recycle"
+            android:textColor="#FFFFFF" />
 
         <RadioButton
             android:id="@+id/TrashRadioButton"
             android:layout_width="match_parent"
             android:layout_height="58dp"
-            android:text="Trash" />
+            android:buttonTint="#00E5FF"
+            android:text="Trash"
+            android:textColor="#FFFFFF" />
     </RadioGroup>
 
     <EditText
@@ -176,26 +198,31 @@
         android:layout_height="50dp"
         android:ems="10"
         android:inputType="time"
+        android:textColor="#FFFFFF"
+        app:backgroundTint="#00E5FF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/TimeTextView"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.164" />
+        app:layout_constraintVertical_bias="0.164"
+        tools:text="hh/mm" />
 
     <EditText
         android:id="@+id/editTextDate"
         android:layout_width="210dp"
         android:layout_height="50dp"
-        android:ems="10"
         android:inputType="date"
+        android:textColor="#FFFFFF"
         android:textSize="18sp"
+        app:backgroundTint="#00E5FF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/DateTextView"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.07999998" />
+        app:layout_constraintVertical_bias="0.07999998"
+        tools:text="yyyy/mm/dd" />
 
     <EditText
         android:id="@+id/editTextLocation"
@@ -204,6 +231,8 @@
         android:ems="10"
         android:gravity="start|top"
         android:inputType="textMultiLine"
+        android:textColor="#FFFFFF"
+        app:backgroundTint="#00E5FF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -218,6 +247,8 @@
         android:ems="10"
         android:gravity="start|top"
         android:inputType="textMultiLine"
+        android:textColor="#FFFFFF"
+        app:backgroundTint="#00E5FF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -229,7 +260,9 @@
         android:id="@+id/useCurrentLocation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#00E5FF"
         android:text="use Current Location"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

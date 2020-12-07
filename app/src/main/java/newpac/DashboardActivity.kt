@@ -37,8 +37,9 @@ class DashboardActivity : AppCompatActivity() {
 
     }
 
+
     private fun schedulePickupMethod() {
-        val intent = Intent(this@DashboardActivity, SchedulePickupActivity::class.java)
+        val intent = Intent(this@DashboardActivity,SchedulePickupActivity::class.java)
         startActivity(intent)
     }
 
@@ -58,7 +59,7 @@ class DashboardActivity : AppCompatActivity() {
     }
 
     private fun gpsTrackerMethod() {
-        val intent = Intent(this@DashboardActivity, GarbageTruckGPSMarkOnMap::class.java)
+        val intent = Intent(this@DashboardActivity, FakeGpsDataUploadForShowOffActivity::class.java)
         startActivity(intent)
     }
 }

@@ -81,7 +81,7 @@
 
         <activity android:name="SchedulePickupActivity" />
 
-          
+
         <activity
             android:name="ReportTrashActivity"
             android:label="@string/title_activity_main"
