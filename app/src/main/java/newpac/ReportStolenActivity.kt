@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
@@ -14,8 +15,12 @@ class ReportStolenActivity : AppCompatActivity() {
     private var reportStolen: Button?=null
     private var truckShipment: Button?=null
     var firebase = FirebaseDatabase.getInstance()
-    var myRef = firebase.getReference().child("Reported stolen")
-    var myRef1 = firebase.getReference().child("shiped")
+    var auth = FirebaseAuth.getInstance()
+    var user = auth.currentUser
+
+
+    var myRef = firebase.getReference().child(user!!.uid).child("Reported stolen")
+    var myRef1 = firebase.getReference().child(user!!.uid).child("shiped")
     private var shiped:String?=null
     private var stolenReport:String?=null
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 
 class ReportStolenListActivity : AppCompatActivity() {
@@ -12,7 +13,9 @@ class ReportStolenListActivity : AppCompatActivity() {
     private var stolenLocation:EditText?=null
     private var stolenDate:EditText?=null
     var firebase = FirebaseDatabase.getInstance()
-    var myRef = firebase.getReference().child("Reported stolen")
+    var myRef = firebase.getReference()
+    var auth = FirebaseAuth.getInstance()
+    var user = auth.currentUser
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_report_stolen_list)
@@ -22,7 +25,7 @@ class ReportStolenListActivity : AppCompatActivity() {
 
         submit!!.setOnClickListener {
             if (stolenDate!!.text.toString()!=null&&stolenLocation!!.text.toString()!=null){
-                myRef.setValue(stolenDate!!.text.toString()+"---"+stolenLocation!!.text.toString())
+                myRef.child(user!!.uid).child("Reported stolen").setValue(stolenDate!!.text.toString()+"---"+stolenLocation!!.text.toString())
                 Toast.makeText(this, "Stolen report submited", Toast.LENGTH_LONG)
                     .show()
                 finish()

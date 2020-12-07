@@ -10,6 +10,7 @@ import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
@@ -18,7 +19,9 @@ import com.google.firebase.database.ValueEventListener
 class ShipmentTrucker : AppCompatActivity(), OnMapReadyCallback {
 
     private lateinit var mMap: GoogleMap
-    private var myRef = FirebaseDatabase.getInstance().getReference().child("ShipmentTruckLatLng")
+    private var auth = FirebaseAuth.getInstance()
+    private var user = auth.currentUser
+    private var myRef = FirebaseDatabase.getInstance().getReference().child(user!!.uid).child("ShipmentTruckLatLng")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

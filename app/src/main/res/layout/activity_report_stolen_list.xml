@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
+   
     tools:context=".ReportStolenListActivity"
     android:background="@color/black">
 
@@ -11,7 +13,11 @@
         android:id="@+id/stolenDate"
         android:layout_width="94dp"
         android:layout_height="78dp"
+
+
+
         android:text="Date stolen:"
+
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -29,7 +35,9 @@
         android:id="@+id/stolenLocation"
         android:layout_width="112dp"
         android:layout_height="35dp"
+
         android:text="Location:"
+
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -50,6 +58,8 @@
         android:ems="10"
         android:gravity="start|top"
         android:inputType="textMultiLine"
+        android:textColor="#FFFFFF"
+        app:backgroundTint="#00E5FF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.777"
@@ -62,7 +72,9 @@
         android:id="@+id/stolenSubmitButton"
         android:layout_width="119dp"
         android:layout_height="64dp"
+        android:background="#00E5FF"
         android:text="Submit"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -78,6 +90,8 @@
         android:layout_height="59dp"
         android:ems="10"
         android:inputType="date"
+        android:textColor="#FFFFFF"
+        app:backgroundTint="#00E5FF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.706"

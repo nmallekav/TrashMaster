@@ -4,14 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
+    android:background="#000000"
+    android:backgroundTint="#000000"
+    android:backgroundTintMode="src_in"
+    tools:context=".ReportStolenActivity">
+
     tools:context=".ReportStolenActivity"
     android:background="@color/black">
+
 
     <Button
         android:id="@+id/truckShipment"
         android:layout_width="288dp"
         android:layout_height="59dp"
+
+       
+
         android:text="Truck new trashcan shipment"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,7 +34,11 @@
         android:id="@+id/ReportStolenButton"
         android:layout_width="141dp"
         android:layout_height="81dp"
+
+      
+
         android:text="Report Stolen Trashcan"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

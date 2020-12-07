@@ -58,7 +58,7 @@ class GarbageTruckGPSMarkOnMap : AppCompatActivity(), OnMapReadyCallback {
                     mMap.clear()
                     mMap.addMarker(MarkerOptions().position(latandlng).title("Garbage Truck"))
                     mMap.moveCamera(CameraUpdateFactory.newLatLng(latandlng))
-                    mMap.animateCamera(CameraUpdateFactory.zoomTo(20.toFloat()), 2000, null)
+                    mMap.animateCamera(CameraUpdateFactory.zoomTo(18.toFloat()), 2000, null)
                 }else{
                     Toast.makeText(this@GarbageTruckGPSMarkOnMap, "There is not garbage truck work now", Toast.LENGTH_LONG)
                         .show()
