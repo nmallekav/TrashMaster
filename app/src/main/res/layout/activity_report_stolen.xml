@@ -4,26 +4,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ReportStolenActivity">
+    tools:context=".ReportStolenActivity"
+    android:background="@color/black">
 
     <Button
         android:id="@+id/truckShipment"
         android:layout_width="288dp"
         android:layout_height="59dp"
-        android:text="Truck new trash can shipment"
+        android:text="Truck new trashcan shipment"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:textColor ="@color/white"/>
 
     <Button
         android:id="@+id/ReportStolenButton"
         android:layout_width="141dp"
         android:layout_height="81dp"
-        android:text="Report Stolen"
+        android:text="Report Stolen Trashcan"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.24000001" />
+        app:layout_constraintVertical_bias="0.24000001"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:textColor ="@color/white"/>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="63dp"
+        android:layout_height="175dp"
+        android:layout_marginStart="180dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/trashcan2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/truckShipment" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

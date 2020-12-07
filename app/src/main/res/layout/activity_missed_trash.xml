@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity = "center">
+    android:gravity = "center"
+    android:background="@color/black">
 
     <TextView
         android:text="Missed Trash"
@@ -11,9 +12,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="10dp"
-        android:paddingBottom="10dp"
         android:textSize="35dp"
-        android:gravity = "center"/>
+        android:gravity = "center"
+        android:textColor="@color/white"
+        android:shadowColor="@android:color/holo_blue_dark"
+        android:shadowDx="7"
+        android:shadowDy="7"
+        android:shadowRadius="1"/>
 
     <TextView
         android:id="@+id/instructions"
@@ -24,15 +29,22 @@
         android:gravity = "center"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
-        android:paddingTop="70dp"/>
+        android:paddingTop="20dp"
+        android:textColor="@color/white"
+        android:shadowColor="@android:color/holo_blue_dark"
+        android:shadowDx="7"
+        android:shadowDy="7"
+        android:shadowRadius="1"/>
 
-    <EditText
-        android:id="@+id/date"
-        android:layout_width="match_parent"
-        android:layout_height="67dp"
-        android:ems="10"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"/>
+    <DatePicker
+        android:id="@+id/simpleDatePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="153dp"
+        android:datePickerMode="spinner"
+        android:scaleX="0.8"
+        android:scaleY="0.6"
+        android:background="@android:color/holo_blue_dark"/>
+
 
     <TextView
         android:layout_width="match_parent"
@@ -41,17 +53,26 @@
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
         android:gravity = "center"
         android:paddingTop="10dp"
-        android:paddingBottom="10dp"/>
+        android:paddingBottom="10dp"
+        android:textColor="@color/white"
+        android:shadowColor="@android:color/holo_blue_dark"
+        android:shadowDx="7"
+        android:shadowDy="7"
+        android:shadowRadius="1"/>
 
     <EditText
         android:id="@+id/complaints"
-        android:layout_width="match_parent"
+        android:layout_width="350dp"
         android:layout_height="67dp"
         android:ems="10"
-        android:paddingLeft="10dp"
+        android:paddingLeft="20dp"
         android:paddingRight="10dp"
         android:paddingTop="10dp"
-        android:paddingBottom="10dp"/>
+        android:paddingBottom="10dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        />
 
     <TextView
         android:layout_width="match_parent"
@@ -60,15 +81,23 @@
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
         android:gravity = "center"
         android:paddingTop="40dp"
-        android:paddingBottom="40dp"/>
+        android:paddingBottom="40dp"
+        android:textColor="@color/white"
+        android:shadowColor="@android:color/holo_blue_dark"
+        android:shadowDx="7"
+        android:shadowDy="7"
+        android:shadowRadius="1"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"/>
 
     <Button
         android:id="@+id/submit"
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:text="Submit"
         android:paddingTop="10dp"
-        />
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:textColor ="@color/white"/>
 
 
 </LinearLayout>

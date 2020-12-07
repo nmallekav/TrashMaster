@@ -10,10 +10,11 @@ import com.google.firebase.auth.FirebaseAuth
 
 class DashboardActivity : AppCompatActivity() {
     private var mGpsTracker: Button? = null
-    private var mReportSlolen: Button? = null
+    private var mReportStolen: Button? = null
     private var mMissedTrash: Button? = null
     private var mReportTrash: Button? = null
     private var mSchedulePickup: Button? = null
+    private var mAddTrashcan: Button? = null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,8 +24,8 @@ class DashboardActivity : AppCompatActivity() {
         mSchedulePickup = findViewById(R.id.schedule_pickup)
         mSchedulePickup!!.setOnClickListener {schedulePickupMethod()}
 
-        mReportSlolen = findViewById(R.id.report_stolen)
-        mReportSlolen!!.setOnClickListener {reportStolenMethod()}
+        mReportStolen = findViewById(R.id.report_stolen)
+        mReportStolen!!.setOnClickListener {reportStolenMethod()}
 
         mMissedTrash = findViewById(R.id.missed_trash)
         mMissedTrash!!.setOnClickListener {missedTrashMethod()}
@@ -34,7 +35,9 @@ class DashboardActivity : AppCompatActivity() {
 
         mGpsTracker = findViewById(R.id.gps_tracker)
         mGpsTracker!!.setOnClickListener {gpsTrackerMethod()}
-        
+
+        mAddTrashcan = findViewById(R.id.trashcan_number)
+        mAddTrashcan!!.setOnClickListener{addTrashcanNumber()}
     }
 
     private fun schedulePickupMethod() {
@@ -59,6 +62,11 @@ class DashboardActivity : AppCompatActivity() {
 
     private fun gpsTrackerMethod() {
         val intent = Intent(this@DashboardActivity, GarbageTruckGPSMarkOnMap::class.java)
+        startActivity(intent)
+    }
+
+    private fun addTrashcanNumber() {
+        val intent = Intent(this@DashboardActivity, AddTrashCanActivity::class.java)
         startActivity(intent)
     }
 }

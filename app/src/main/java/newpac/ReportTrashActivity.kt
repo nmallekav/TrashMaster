@@ -70,7 +70,7 @@ class ReportTrashActivity : AppCompatActivity() {
     //with "Report trash" as the primary key and current time as secondary key
     fun reportTrash(){
     storage = FirebaseStorage.getInstance().reference
-        storage.child("pictures/").putFile(photoURI)
+        storage.child(location.toString()).putFile(photoURI)
     }
 
     private fun getLocationUpdates(){
@@ -84,11 +84,6 @@ class ReportTrashActivity : AppCompatActivity() {
             Log.d(TAG, e.localizedMessage)
         }
     }
-
-
-
-
-
 
 
     companion object {

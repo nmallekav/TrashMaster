@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity = "center"
+    android:background="@color/black">
+
+    <TextView
+        android:id="@+id/instructions"
+        android:layout_width="309dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:paddingBottom="40dp"
+        android:text="Add a trashcan number to your account"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:shadowColor="@android:color/holo_blue_dark"
+        android:shadowDx="7"
+        android:shadowDy="7"
+        android:shadowRadius="1"/>
+
+    <EditText
+        android:id="@+id/trashcan_number"
+        android:layout_width="309dp"
+        android:layout_height="67dp"
+        android:ems="10"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:hint ="Trashcan Number"
+        android:textColorHint="@color/white"
+        android:backgroundTint="@android:color/holo_blue_dark"/>
+
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:paddingTop="10dp"
+        android:text="Submit"
+        android:textColor="@color/white" />
+
+
+</LinearLayout>

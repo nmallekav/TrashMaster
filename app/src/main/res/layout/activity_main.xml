@@ -4,41 +4,64 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/black">
 
     <Button
         android:id="@+id/register"
-        android:layout_width="352dp"
-        android:layout_height="66dp"
-        android:layout_marginTop="76dp"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="40dp"
         android:text="Register"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:textColor ="@color/white"/>
 
     <Button
         android:id="@+id/login"
-        android:layout_width="350dp"
-        android:layout_height="76dp"
-        android:layout_marginTop="67dp"
-        android:layout_marginBottom="328dp"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="40dp"
         android:text="Login"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.54"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/register"
-        app:layout_constraintVertical_bias="0.0" />
-
+        app:layout_constraintVertical_bias="0.0"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:textColor ="@color/white"/>
+    
     <TextView
         android:id="@+id/textView"
-        android:layout_width="168dp"
-        android:layout_height="26dp"
-        android:layout_marginTop="188dp"
+        android:layout_width="310dp"
+        android:layout_height="147dp"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
         android:text="Welcome to Trash Master!"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:textSize="35dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.445"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/white"
+        android:shadowColor="@android:color/holo_blue_dark"
+        android:shadowDx="7"
+        android:shadowDy="7"
+        android:shadowRadius="1"/>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="63dp"
+        android:layout_height="175dp"
+        android:layout_marginStart="180dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/trashcan2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

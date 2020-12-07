@@ -4,33 +4,44 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".reportStolenListActivity">
+    tools:context=".ReportStolenListActivity"
+    android:background="@color/black">
 
     <TextView
         android:id="@+id/stolenDate"
         android:layout_width="94dp"
         android:layout_height="78dp"
-        android:text="stolen Date:"
+        android:text="Date stolen:"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.117"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.36" />
+        app:layout_constraintVertical_bias="0.36"
+        android:textColor="@color/white"
+        android:shadowColor="@android:color/holo_blue_dark"
+        android:shadowDx="7"
+        android:shadowDy="7"
+        android:shadowRadius="1"/>
 
     <TextView
         android:id="@+id/stolenLocation"
         android:layout_width="112dp"
         android:layout_height="35dp"
-        android:text="location:"
+        android:text="Location:"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.117"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.214" />
+        app:layout_constraintVertical_bias="0.214"
+        android:textColor="@color/white"
+        android:shadowColor="@android:color/holo_blue_dark"
+        android:shadowDx="7"
+        android:shadowDy="7"
+        android:shadowRadius="1"/>
 
     <EditText
         android:id="@+id/stolenLocationEditText"
@@ -44,7 +55,8 @@
         app:layout_constraintHorizontal_bias="0.777"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.205" />
+        app:layout_constraintVertical_bias="0.205"
+        android:backgroundTint="@android:color/holo_blue_dark"/>
 
     <Button
         android:id="@+id/stolenSubmitButton"
@@ -56,7 +68,9 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.673" />
+        app:layout_constraintVertical_bias="0.673"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:textColor ="@color/white"/>
 
     <EditText
         android:id="@+id/StoleneditTextDate"
@@ -69,6 +83,7 @@
         app:layout_constraintHorizontal_bias="0.706"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.377" />
+        app:layout_constraintVertical_bias="0.377"
+        android:backgroundTint="@android:color/holo_blue_dark"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
