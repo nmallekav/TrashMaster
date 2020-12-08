@@ -13,12 +13,12 @@ class LoginActivity : AppCompatActivity() {
     private var userPassword: EditText? = null
     private var loginBtn: Button? = null
 
-    private var mAuth: FirebaseAuth? = null
+    private var mAuth: FirebaseAuth? = null // Use com.google.firebase library
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        mAuth = FirebaseAuth.getInstance()
+        mAuth = FirebaseAuth.getInstance() // Use com.google.firebase library
 
         userEmail = findViewById(R.id.email)
         userPassword = findViewById(R.id.password)

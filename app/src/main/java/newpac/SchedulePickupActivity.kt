@@ -37,8 +37,7 @@ class SchedulePickupActivity : AppCompatActivity() {
     private  var locationListener: LocationListener? =null
 
     var firebase = FirebaseDatabase.getInstance()
-    var myref = firebase.getReference()
-
+    var myref = firebase.getReference() // Use com.google.firebase library
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_schedule_pickup)
@@ -55,8 +54,8 @@ class SchedulePickupActivity : AppCompatActivity() {
         trashRadioButton=findViewById(R.id.TrashRadioButton) as RadioButton
         recycleRadioButton = findViewById(R.id.RecycleRadioButton) as RadioButton
         typeRadioGroup!!.check(R.id.TrashRadioButton)
-        var firebase = FirebaseAuth.getInstance()
-        var user = firebase.currentUser
+        var firebase = FirebaseAuth.getInstance() // Use com.google.firebase library
+        var user = firebase.currentUser // Use com.google.firebase library
         useCurrentButton!!.setOnClickListener{
             mLocationManager = getSystemService(Context.LOCATION_SERVICE) as LocationManager
 

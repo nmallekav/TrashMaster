@@ -47,7 +47,7 @@ class FakeGpsDataUploadForShowOffActivity : AppCompatActivity() {
         }
     }
     class MyTimerTask(var lat:Double,var lng:Double ) : TimerTask() {
-        private var myRef = FirebaseDatabase.getInstance().getReference().child("GarbageTruckLatLng")
+        private var myRef = FirebaseDatabase.getInstance().getReference().child("GarbageTruckLatLng") // Use com.google.firebase library
         override fun run() {
             lat=lat+0.00005
             myRef.setValue(lat.toString()+','+lng.toString())

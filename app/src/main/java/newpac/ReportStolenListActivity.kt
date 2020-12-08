@@ -13,8 +13,8 @@ class ReportStolenListActivity : AppCompatActivity() {
     private var stolenLocation:EditText?=null
     private var stolenDate:EditText?=null
     var firebase = FirebaseDatabase.getInstance()
-    var myRef = firebase.getReference()
-    var auth = FirebaseAuth.getInstance()
+    var myRef = firebase.getReference() // Use com.google.firebase library
+    var auth = FirebaseAuth.getInstance() // Use com.google.firebase library
     var user = auth.currentUser
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

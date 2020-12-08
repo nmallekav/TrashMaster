@@ -18,10 +18,10 @@ import com.google.firebase.database.ValueEventListener
 
 class ShipmentTrucker : AppCompatActivity(), OnMapReadyCallback {
 
-    private lateinit var mMap: GoogleMap
-    private var auth = FirebaseAuth.getInstance()
+    private lateinit var mMap: GoogleMap // use com.google.android.gms.maps library
+    private var auth = FirebaseAuth.getInstance() // Use com.google.firebase library
     private var user = auth.currentUser
-    private var myRef = FirebaseDatabase.getInstance().getReference().child(user!!.uid).child("ShipmentTruckLatLng")
+    private var myRef = FirebaseDatabase.getInstance().getReference().child(user!!.uid).child("ShipmentTruckLatLng") // Use com.google.firebase library
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,7 +42,7 @@ class ShipmentTrucker : AppCompatActivity(), OnMapReadyCallback {
      * installed Google Play services and returned to the app.
      */
     override fun onMapReady(googleMap: GoogleMap) {
-        mMap = googleMap
+        mMap = googleMap // use com.google.android.gms.maps library
 
         // Add a marker in Sydney and move the camera
 
@@ -50,16 +50,16 @@ class ShipmentTrucker : AppCompatActivity(), OnMapReadyCallback {
     override fun onStart() {
         super.onStart()
 
-        myRef.addValueEventListener(object : ValueEventListener {
+        myRef.addValueEventListener(object : ValueEventListener { // Use com.google.firebase library
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 var latlng=dataSnapshot.getValue(String::class.java)
                 if(latlng!=null){
                     var latAndLng =latlng!!.split(',')
                     var latandlng=LatLng(latAndLng!!.get(0).toDouble(), latAndLng!!.get(1).toDouble())
-                    mMap.clear()
-                    mMap.addMarker(MarkerOptions().position(latandlng).title("Garbage Truck"))
-                    mMap.moveCamera(CameraUpdateFactory.newLatLng(latandlng))
-                    mMap.animateCamera(CameraUpdateFactory.zoomTo(20.toFloat()), 2000, null)
+                    mMap.clear() // use com.google.android.gms.maps library
+                    mMap.addMarker(MarkerOptions().position(latandlng).title("Garbage Truck")) // use com.google.android.gms.maps library
+                    mMap.moveCamera(CameraUpdateFactory.newLatLng(latandlng)) // use com.google.android.gms.maps library
+                    mMap.animateCamera(CameraUpdateFactory.zoomTo(20.toFloat()), 2000, null) // use com.google.android.gms.maps library
                 }else{
                     Toast.makeText(this@ShipmentTrucker, "Not ship yet", Toast.LENGTH_LONG)
                         .show()

@@ -21,7 +21,7 @@ import java.io.File
 
 class ReportTrashActivity : AppCompatActivity() {
     lateinit var photoURI: Uri
-    private lateinit var storage: StorageReference
+    private lateinit var storage: StorageReference  // Use com.google.firebase library
     private lateinit var mLocationManager: LocationManager
     private var location: Location? = null
 
@@ -69,7 +69,7 @@ class ReportTrashActivity : AppCompatActivity() {
     //store photo, current location and current time in database
     //with "Report trash" as the primary key and current time as secondary key
     fun reportTrash(){
-    storage = FirebaseStorage.getInstance().reference
+    storage = FirebaseStorage.getInstance().reference // Use com.google.firebase library
         storage.child(location.toString()).putFile(photoURI)
     }
 
