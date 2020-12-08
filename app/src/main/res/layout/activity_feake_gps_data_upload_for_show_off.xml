@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#000000"
-    tools:context=".feakeGpsDataUploadForShowOffActivity">
+    tools:context=".FakeGpsDataUploadForShowOffActivity">
 
     <Button
         android:id="@+id/uploadFakeDataButton"
-        android:layout_width="167dp"
-        android:layout_height="58dp"
-        android:background="#00E5FF"
+        android:layout_width="190dp"
+        android:layout_height="60dp"
+        android:background="@android:color/holo_blue_dark"
         android:text="start upload fake gps data"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -23,8 +23,8 @@
     <Button
         android:id="@+id/ShowGarbageTruckOnMapButton"
         android:layout_width="197dp"
-        android:layout_height="66dp"
-        android:background="#00E5FF"
+        android:layout_height="60dp"
+        android:background="@android:color/holo_blue_dark"
         android:text="Show Garbage Truck On Map"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -35,9 +35,9 @@
 
     <Button
         android:id="@+id/stopUploadFakeDataButton"
-        android:layout_width="175dp"
-        android:layout_height="84dp"
-        android:background="#00E5FF"
+        android:layout_width="190dp"
+        android:layout_height="60dp"
+        android:background="@android:color/holo_blue_dark"
         android:text="stop Upload Fake Data"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"

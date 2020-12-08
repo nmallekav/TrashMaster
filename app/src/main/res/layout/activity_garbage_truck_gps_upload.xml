@@ -11,22 +11,24 @@
     <TextView
         android:id="@+id/uploadingLocationView"
         android:layout_width="309dp"
-        android:layout_height="74dp"
+        android:layout_height="90dp"
         android:fontFamily="sans-serif-black"
+        android:shadowColor="@android:color/holo_blue_dark"
+        android:shadowDx="7"
+        android:shadowDy="7"
+        android:shadowRadius="1"
         android:text="Your location is uploading...."
         android:textAllCaps="false"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@color/white"
         android:textSize="24sp"
         android:textStyle="bold"
         android:typeface="monospace"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:textColor="@color/white"
-        android:shadowColor="@android:color/holo_blue_dark"
-        android:shadowDx="7"
-        android:shadowDy="7"
-        android:shadowRadius="1"/>
+         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
