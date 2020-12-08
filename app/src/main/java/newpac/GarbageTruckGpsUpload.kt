@@ -18,7 +18,7 @@ class GarbageTruckGpsUpload : AppCompatActivity() {
     private var timer:Timer?=null
     private var task: TimerTask?=null
     var firebase = FirebaseDatabase.getInstance()
-    var myref = firebase.getReference().child("GarbageTruckLatLng")
+    var myref = firebase.getReference().child("GarbageTruckLatLng") // Use com.google.firebase library
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_garbage_truck_gps_upload)
@@ -28,7 +28,7 @@ class GarbageTruckGpsUpload : AppCompatActivity() {
 
     }
     class MyTimerTask() : TimerTask() {
-        private var myRef = FirebaseDatabase.getInstance().getReference().child("GarbageTruckLatLng")
+        private var myRef = FirebaseDatabase.getInstance().getReference().child("GarbageTruckLatLng") // Use com.google.firebase library
         override fun run() {
 
         }

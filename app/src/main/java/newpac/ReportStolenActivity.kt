@@ -15,12 +15,12 @@ class ReportStolenActivity : AppCompatActivity() {
     private var reportStolen: Button?=null
     private var truckShipment: Button?=null
     var firebase = FirebaseDatabase.getInstance()
-    var auth = FirebaseAuth.getInstance()
+    var auth = FirebaseAuth.getInstance() // use FirebaseAuth library
     var user = auth.currentUser
 
 
-    var myRef = firebase.getReference().child(user!!.uid).child("Reported stolen")
-    var myRef1 = firebase.getReference().child(user!!.uid).child("shiped")
+    var myRef = firebase.getReference().child(user!!.uid).child("Reported stolen")  // Use FireBase Database DatabaseReference
+    var myRef1 = firebase.getReference().child(user!!.uid).child("shiped")  // Use FireBase Database DatabaseReference
     private var shiped:String?=null
     private var stolenReport:String?=null
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,7 +32,7 @@ class ReportStolenActivity : AppCompatActivity() {
             var intent1= Intent(this, ReportStolenListActivity::class.java)
             startActivity(intent1)
         }
-        truckShipment!!.setOnClickListener {
+        truckShipment!!.setOnClickListener { // Use com.google.firebase library
             myRef.addValueEventListener(object : ValueEventListener {
                 override fun onDataChange(dataSnapshot: DataSnapshot) {
                      stolenReport=dataSnapshot.getValue(String::class.java)
@@ -42,7 +42,7 @@ class ReportStolenActivity : AppCompatActivity() {
 
                 }
             })
-            myRef1.addValueEventListener(object : ValueEventListener {
+            myRef1.addValueEventListener(object : ValueEventListener { // Use com.google.firebase library
                 override fun onDataChange(dataSnapshot: DataSnapshot) {
                     shiped=dataSnapshot.getValue(String::class.java)
                 }

@@ -22,7 +22,7 @@ class RegistrationActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registration)
 
-        mAuth = FirebaseAuth.getInstance()
+        mAuth = FirebaseAuth.getInstance() // Use com.google.firebase library
 
         mEmail = findViewById(R.id.email)
         mPassword = findViewById(R.id.password)

@@ -16,7 +16,7 @@ import newpac.R
 
 
 class MissedTrashActivity : AppCompatActivity() {
-    private lateinit var database: DatabaseReference
+    private lateinit var database: DatabaseReference // Use com.google.firebase library
     private lateinit var trashcanNumber : String
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,9 +33,9 @@ class MissedTrashActivity : AppCompatActivity() {
             val month = datePicker.month
             val year = datePicker.year
 
-            database = FirebaseDatabase.getInstance().getReference()
+            database = FirebaseDatabase.getInstance().getReference() // Use com.google.firebase library
 
-            val user = FirebaseAuth.getInstance().currentUser
+            val user = FirebaseAuth.getInstance().currentUser // Use com.google.firebase library
 
             val myRef = database.child(user!!.uid).child("trashcanNumber")
 
