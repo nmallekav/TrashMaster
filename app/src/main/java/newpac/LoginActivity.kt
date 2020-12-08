@@ -11,29 +11,24 @@ import com.google.firebase.auth.FirebaseAuth
 class LoginActivity : AppCompatActivity() {
     private var userEmail: EditText? = null
     private var userPassword: EditText? = null
-    private var loginBtn: Button? = null
-
+    private var loginB: Button? = null
     private var mAuth: FirebaseAuth? = null // Use com.google.firebase library
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
         mAuth = FirebaseAuth.getInstance() // Use com.google.firebase library
-
         userEmail = findViewById(R.id.email)
         userPassword = findViewById(R.id.password)
-        loginBtn = findViewById(R.id.login_button)
+        loginB = findViewById(R.id.login_button)
 
-        loginBtn!!.setOnClickListener { loginUserAccount() }
+        loginB!!.setOnClickListener { loginUser() }
     }
 
-    // TODO: Allow the user to log into their account
-    // If the email and password are not empty, try to log in
-    // If the login is successful, store info into intent and launch newpac.DashboardActivity
-    private fun loginUserAccount() {
+    private fun loginUser() {
         val email: String = userEmail!!.text.toString()
         val password: String = userPassword!!.text.toString()
-
 
         mAuth!!.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener { task ->
@@ -42,7 +37,6 @@ class LoginActivity : AppCompatActivity() {
                         .show()
 
                    val intent = Intent(this, DashboardActivity::class.java)
-
                    startActivity(intent)
                 } else {
                     Toast.makeText(

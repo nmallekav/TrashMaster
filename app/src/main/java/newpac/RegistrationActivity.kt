@@ -12,10 +12,10 @@ import com.google.firebase.auth.FirebaseAuth
 
 class RegistrationActivity : AppCompatActivity() {
 
+    // Looked at code from firebase lab
     private var mEmail: EditText? = null
     private var mPassword: EditText? = null
-    private var regBtn: Button? = null
-
+    private var registrationB: Button? = null
     private var mAuth: FirebaseAuth? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,19 +23,16 @@ class RegistrationActivity : AppCompatActivity() {
         setContentView(R.layout.activity_registration)
 
         mAuth = FirebaseAuth.getInstance() // Use com.google.firebase library
-
         mEmail = findViewById(R.id.email)
         mPassword = findViewById(R.id.password)
-        regBtn = findViewById(R.id.register)
+        registrationB = findViewById(R.id.register)
 
-        regBtn!!.setOnClickListener { registerNewUser() }
+        registrationB!!.setOnClickListener { register() }
     }
 
-    private fun registerNewUser() {
-
+    private fun register() {
         val email: String = mEmail!!.text.toString()
         val password: String = mPassword!!.text.toString()
-
 
         mAuth!!.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener { task ->
@@ -47,7 +44,7 @@ class RegistrationActivity : AppCompatActivity() {
                     startActivity(intent)
 
                 } else {
-                    Toast.makeText(applicationContext, "Registration failed! Please try again later", Toast.LENGTH_LONG).show()
+                    Toast.makeText(applicationContext, "Registration failed!", Toast.LENGTH_LONG).show()
                     val e = task.exception
                     Log.e("newpac.LoginActivity", "Failed Registration", e);
                 }
