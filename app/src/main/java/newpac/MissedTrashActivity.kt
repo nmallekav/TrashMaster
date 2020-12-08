@@ -36,9 +36,8 @@ class MissedTrashActivity : AppCompatActivity() {
             database = FirebaseDatabase.getInstance().getReference()
 
             val user = FirebaseAuth.getInstance().currentUser
-            // val trashcanNumber = database.child(user!!.uid).child("trashcanNumber").toString()
 
-            val  myRef = FirebaseDatabase.getInstance().getReference().child(user!!.uid).child("trashcanNumber")
+            val myRef = database.child(user!!.uid).child("trashcanNumber")
 
             myRef.addValueEventListener(object : ValueEventListener {
                 override fun onDataChange(dataSnapshot: DataSnapshot) {
@@ -50,11 +49,9 @@ class MissedTrashActivity : AppCompatActivity() {
                 }
             })
 
-            database.child(trashcanNumber).child("Missed Trash").child("Date")
-                .setValue("${day}, ${month}, ${year}")
-            Log.i(TAG, "${day}, ${month}, ${year}")
-            database.child(trashcanNumber).child("Missed Trash").child("Complaints")
-                .setValue(complaints.text.toString())
+            database.child(user!!.uid).child("Missed Trash").setValue("${day}, ${month}, ${year}")
+
+            database.child(user!!.uid).child("Complaints").setValue(complaints.text.toString())
 
             Toast.makeText(this, "Submitted!", Toast.LENGTH_LONG).show()
             complaints.setText("")
