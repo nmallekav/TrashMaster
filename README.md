@@ -1,6 +1,5 @@
-# cmsc436TrashMaster
-Semester Project for CMSC436 Fall 2020
+# Trash Master
 
-Name: Shannon Groves,  Group number: 51, Project name: Trash Master
-Name: Nishanth Mallekav,  Group number: 51, Project name: Trash Master
-Name: Zeyang Wang, Group Number:51, Project name: Trash Master
+Trash master is an app that allows citizens to register their trash can to our database in firebase. This would allow users
+to schedule a specific pickup date for their trash, report their trash can if it is stolen, report a missed trash pickup,
+report trash on their street, and finally, track the garbage truck and how far away it is from their house!
